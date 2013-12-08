@@ -25,7 +25,7 @@
         <clobbers target="navigator.camera" />
     </js-module>
 
-    <js-module src="www/CropCamera.js" name="camera">
+    <js-module src="www/CropCamera.js" name="CropCamera">
         <clobbers target="navigator.cropCamera" />
     </js-module>
 
