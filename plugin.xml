@@ -25,6 +25,10 @@
         <clobbers target="navigator.camera" />
     </js-module>
 
+    <js-module src="www/CropCamera.js" name="camera">
+        <clobbers target="navigator.cropCamera" />
+    </js-module>
+
     <!-- firefoxos -->
     <platform name="firefoxos">
         <config-file target="config.xml" parent="/*">
@@ -43,12 +47,16 @@
             <feature name="Camera">
                 <param name="android-package" value="org.apache.cordova.camera.CameraLauncher"/>
             </feature>
+            <feature name="CropCamera">
+                <param name="android-package" value="org.apache.cordova.camera.CropCameraLauncher"/>
+            </feature>
         </config-file>
         <config-file target="AndroidManifest.xml" parent="/*">
             <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
         </config-file>
 
         <source-file src="src/android/CameraLauncher.java" target-dir="src/org/apache/cordova/camera" />
+        <source-file src="src/android/CropCameraLauncher.java" target-dir="src/org/apache/cordova/camera" />
         <source-file src="src/android/FileHelper.java" target-dir="src/org/apache/cordova/camera" />
         <source-file src="src/android/ExifHelper.java" target-dir="src/org/apache/cordova/camera" />
 
